@@ -94,6 +94,9 @@ body {
   border: 0;
   background-color: #ffffff;
 }
+*{
+  box-sizing: border-box;
+}
 
 /*--------------------------------------------------------------
 # Navbar
@@ -459,3 +462,46 @@ body {
   }
 }
 
+
+
+
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+
+#gallery {
+  max-width: 1440px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px;
+  margin: 0px auto auto;
+  gap: 80px;
+  background: yellow;
+  box-sizing: border-box;
+
+}
+
+#gallery .row{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#gallery .row .images{
+  margin-bottom: 0!important;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0.75rem!important;
+}
+
+
+#gallery .row .images img{
+  margin-bottom: 1.5rem!important;
+  width: 100%;
+  border-radius: .25rem!important;
+  vertical-align: middle;
+  border-style: none;
+}
