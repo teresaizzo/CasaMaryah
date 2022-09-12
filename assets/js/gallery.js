@@ -85,7 +85,7 @@ function changeImg(changeDir) {
         }
     }
 
-    newImg.setAttribute("src", "../assets/img/gallery/" + calcNewImg + ".jpg");
+    newImg.setAttribute("src", "../assets/img/gallery/" + calcNewImg + ".jpeg");
     newImg.setAttribute("id", "current-img");
 
     getLatestOpenedImg = calcNewImg;

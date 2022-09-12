@@ -351,10 +351,10 @@ body {
 #hero-container {
   width: 100%;
   height: 100%;
-  background: url("../img/hero-bg.jpg") no-repeat;
+  background: url("../img/hero-bg.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-position-y: 55px;
+  background-position-y: center;
   padding: 0 90px;
   display: flex;
   align-items: center;
@@ -395,7 +395,7 @@ body {
   padding: 90px;
   margin: 0px auto auto;
   gap: 80px;
-  background: #4a4dfb;
+/*background: #4a4dfb;*/
   box-sizing: border-box;
 
 }
@@ -439,9 +439,18 @@ body {
 
 
 #info .right-container{
-  background: yellow;
+  /*background: yellow;*/
 }
 
+
+#info .right-container .summary-card{
+  width: 372px;
+  height: 467px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+}
 
 
 #info .title-section{
@@ -487,7 +496,7 @@ body {
   grid-template-areas:
           "gallery-h1 gallery-h1 gallery-h1 gallery-h1"
           "img1 img2 img3 img4"
-          "img5 img6 img3 img4"
+          "img5 img6 img7 img8"
 ;
 
 }
@@ -499,6 +508,7 @@ body {
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 /* Images */
@@ -508,32 +518,42 @@ body {
 
 #index-gallery .img1{
   grid-area: img1;
-  background-image:url("../img/gallery/1.jpg") ;
+  background-image:url("../img/gallery/1.jpeg") ;
 }
 
 #index-gallery .img2{
   grid-area: img2;
-  background-image:url("../img/gallery/2.jpg") ;
+  background-image:url("../img/gallery/2.jpeg") ;
 }
 
 #index-gallery .img3{
   grid-area: img3;
-  background-image:url("../img/gallery/3.jpg") ;
+  background-image:url("../img/gallery/3.jpeg") ;
 }
 
 #index-gallery .img4{
   grid-area: img4;
-  background-image:url("../img/gallery/4.jpg") ;
+  background-image:url("../img/gallery/4.jpeg") ;
 }
 
 #index-gallery .img5{
   grid-area: img5;
-  background-image:url("../img/gallery/5.jpg") ;
+  background-image:url("../img/gallery/5.jpeg") ;
 }
 
 #index-gallery .img6{
   grid-area: img6;
-  background-image:url("../img/gallery/6.jpg") ;
+  background-image:url("../img/gallery/6.jpeg") ;
+}
+
+#index-gallery .img7{
+  grid-area: img7;
+  background-image:url("../img/gallery/7.jpeg") ;
+}
+
+#index-gallery .img8{
+  grid-area: img8;
+  background-image:url("../img/gallery/8.jpeg") ;
 }
 
 /* Gallery image titles */
@@ -545,10 +565,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .gallery-img div:hover{
   opacity: 0.8;
+  border-radius: 10px;
   transition: all ease-in-out 100ms;
 }
 
