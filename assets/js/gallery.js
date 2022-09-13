@@ -4,6 +4,10 @@ let windowWidth = window.innerWidth;
 let totalImages = 15;
 
 
+let showAllButton = document.querySelector("#more-images");
+let container = document.body;
+
+//click on gallery images
 if(galleryImages){
     galleryImages.forEach(function(image, index){
         image.onclick = function(){
@@ -17,56 +21,66 @@ if(galleryImages){
 
             getLatestOpenedImg = index + 1;
 
-            // create carousel
-            let container = document.body;
-            let newImgWindow = document.createElement("div");
-            container.appendChild(newImgWindow);
-            newImgWindow.setAttribute("class", "img-window");
-            newImgWindow.setAttribute("onclick", "closeImg()");
+            createCarousel(setNewImgUrl);
 
-            let newImg = document.createElement("img");
-            newImgWindow.appendChild(newImg);
-            newImg.setAttribute("src", "../assets/img/gallery/" + setNewImgUrl);
-            newImg.setAttribute("id", "current-img")
-
-            // create navigation buttons
-            newImg.onload = function (){
-                let imgWidth = this.width;
-                let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
-
-                let newNextBtn = document.createElement("a");
-                let btnNextText = document.createTextNode("Next");
-                newNextBtn.appendChild(btnNextText);
-                container.appendChild(newNextBtn);
-                newNextBtn.setAttribute("class", "img-btn-next");
-                newNextBtn.setAttribute("onclick", "changeImg(1)");
-                newNextBtn.style.cssText= "right: " + calcImgToEdge + "px;";
-
-                let newPrevBtn = document.createElement("a");
-                let btnPrevText = document.createTextNode("Prev");
-                newPrevBtn.appendChild(btnPrevText);
-                container.appendChild(newPrevBtn);
-                newPrevBtn.setAttribute("class", "img-btn-prev");
-                newPrevBtn.setAttribute("onclick", "changeImg(0)");
-                newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
-
-
-                let counter = document.createElement("p");
-                counter.innerText = getLatestOpenedImg+"/"+ totalImages
-                counter.setAttribute("id", "counter")
-                container.appendChild(counter)
-
-            }
-
-
-
-
-
+            let counter = document.createElement("p");
+            counter.innerText = getLatestOpenedImg+"/"+ totalImages
+            counter.setAttribute("id", "counter")
+            container.appendChild(counter)
         }
-
     });
 }
 
+
+//click on button show all
+if (showAllButton) {
+    showAllButton.onclick = function () {
+        createCarousel("1.jpeg");
+
+        let counter = document.createElement("p");
+        counter.innerText = "0/"+ totalImages
+        counter.setAttribute("id", "counter")
+        container.appendChild(counter)
+    }
+}
+
+// create carousel
+function createCarousel(imageUrl){
+
+
+    let newImgWindow = document.createElement("div");
+    container.appendChild(newImgWindow);
+    newImgWindow.setAttribute("class", "img-window");
+    newImgWindow.setAttribute("onclick", "closeImg()");
+
+    let newImg = document.createElement("img");
+    newImgWindow.appendChild(newImg);
+    newImg.setAttribute("src", "../assets/img/gallery/" + imageUrl);
+    newImg.setAttribute("id", "current-img")
+
+    // create navigation buttons
+    newImg.onload = function (){
+        let imgWidth = this.width;
+        let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+
+        let newNextBtn = document.createElement("a");
+        let btnNextText = document.createTextNode("Next");
+        newNextBtn.appendChild(btnNextText);
+        container.appendChild(newNextBtn);
+        newNextBtn.setAttribute("class", "img-btn-next");
+        newNextBtn.setAttribute("onclick", "changeImg(1)");
+        newNextBtn.style.cssText= "right: " + calcImgToEdge + "px;";
+
+        let newPrevBtn = document.createElement("a");
+        let btnPrevText = document.createTextNode("Prev");
+        newPrevBtn.appendChild(btnPrevText);
+        container.appendChild(newPrevBtn);
+        newPrevBtn.setAttribute("class", "img-btn-prev");
+        newPrevBtn.setAttribute("onclick", "changeImg(0)");
+        newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
+
+    }
+}
 
 
 function closeImg(){
