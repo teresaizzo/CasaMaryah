@@ -60,7 +60,7 @@ h1{
   right: 20px;
   opacity: 0;
   visibility: hidden;
-  z-index: 998;
+  z-index: 50;
   transition: 0.25s;
 }
 #button-to-top::after {
