@@ -139,7 +139,7 @@ body {
   color: var(--heading);
   text-align: center;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 14px;
   transition: 0.25s;
 }
 
@@ -395,7 +395,7 @@ body {
   padding: 90px;
   margin: 0px auto auto;
   gap: 80px;
-/*background: #4a4dfb;*/
+  background: #4a4dfb;
   box-sizing: border-box;
 
 }
@@ -439,19 +439,25 @@ body {
 
 
 #info .right-container{
-  /*background: yellow;*/
+  background: yellow;
 }
 
 
 #info .right-container .summary-card{
   width: 372px;
   height: 467px;
+  background-color: #ffffff;
   border: 1px solid rgb(221, 221, 221);
   border-radius: 12px;
   padding: 24px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
 }
 
+.summary-card div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 #info .title-section{
   font-size: 40px;
@@ -628,4 +634,50 @@ body {
 
 .img-btn-prev:hover{
   opacity: 0.8;
+}
+
+
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+#contact{
+  max-width: 1440px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px;
+  margin: 0px auto auto;
+  gap: 80px;
+  background: #4a4dfb;
+  box-sizing: border-box;
+
+}
+
+#contact .left-container {
+  background: red;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: calc(100% - 270px);
+}
+
+#contact .left-container iframe{
+width: 100%;
+}
+
+#contact .right-container{
+  background: yellow;
+}
+
+
+#contact .right-container .summary-card{
+  width: 372px;
+  height: 467px;
+  background-color: #ffffff;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
 }
