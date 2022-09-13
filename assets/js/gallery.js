@@ -5,7 +5,6 @@ let totalImages = 15;
 
 
 let showAllButton = document.querySelector("#more-images");
-let container = document.body;
 
 //click on gallery images
 if(galleryImages){
@@ -22,11 +21,6 @@ if(galleryImages){
             getLatestOpenedImg = index + 1;
 
             createCarousel(setNewImgUrl);
-
-            let counter = document.createElement("p");
-            counter.innerText = getLatestOpenedImg+"/"+ totalImages
-            counter.setAttribute("id", "counter")
-            container.appendChild(counter)
         }
     });
 }
@@ -36,18 +30,13 @@ if(galleryImages){
 if (showAllButton) {
     showAllButton.onclick = function () {
         createCarousel("1.jpeg");
-
-        let counter = document.createElement("p");
-        counter.innerText = "0/"+ totalImages
-        counter.setAttribute("id", "counter")
-        container.appendChild(counter)
     }
 }
 
 // create carousel
 function createCarousel(imageUrl){
 
-
+    let container = document.body;
     let newImgWindow = document.createElement("div");
     container.appendChild(newImgWindow);
     newImgWindow.setAttribute("class", "img-window");
@@ -78,6 +67,12 @@ function createCarousel(imageUrl){
         newPrevBtn.setAttribute("class", "img-btn-prev");
         newPrevBtn.setAttribute("onclick", "changeImg(0)");
         newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
+
+
+        let counter = document.createElement("p");
+        counter.innerText = getLatestOpenedImg+"/"+ totalImages
+        counter.setAttribute("id", "counter")
+        container.appendChild(counter)
 
     }
 }
