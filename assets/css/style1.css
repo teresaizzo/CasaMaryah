@@ -500,7 +500,7 @@ body {
   grid-template-areas:
           "gallery-h1 gallery-h1 gallery-h1 gallery-h1"
           "img1 img2 img3 img4"
-          "img5 img6 img7 img8"
+          "img5 img6 img3 img7"
 ;
 
 }
@@ -525,6 +525,7 @@ body {
 #index-gallery .img1{
   grid-area: img1;
   background-image:url("../img/gallery/1.jpeg") ;
+
 }
 
 #index-gallery .img2{
@@ -535,6 +536,7 @@ body {
 #index-gallery .img3{
   grid-area: img3;
   background-image:url("../img/gallery/3.jpeg") ;
+  height: 610px;
 }
 
 #index-gallery .img4{
@@ -557,10 +559,6 @@ body {
   background-image:url("../img/gallery/7.jpeg") ;
 }
 
-#index-gallery .img8{
-  grid-area: img8;
-  background-image:url("../img/gallery/8.jpeg") ;
-}
 
 /* Gallery image titles */
 .gallery-img div{
