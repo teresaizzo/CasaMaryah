@@ -20,7 +20,7 @@ if(galleryImages){
 
             getLatestOpenedImg = index + 1;
 
-            createCarousel(setNewImgUrl);
+            createCarousel(setNewImgUrl, 0);
         }
     });
 }
@@ -29,12 +29,13 @@ if(galleryImages){
 //click on button show all
 if (showAllButton) {
     showAllButton.onclick = function () {
-        createCarousel("1.jpeg");
+        getLatestOpenedImg = 1;
+        createCarousel("1.jpeg", 1);
     }
 }
 
 // create carousel
-function createCarousel(imageUrl){
+function createCarousel(imageUrl, isAllImages){
 
     let container = document.body;
     let newImgWindow = document.createElement("div");
@@ -68,9 +69,15 @@ function createCarousel(imageUrl){
         newPrevBtn.setAttribute("onclick", "changeImg(0)");
         newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
 
-
         let counter = document.createElement("p");
-        counter.innerText = getLatestOpenedImg+"/"+ totalImages
+
+        if(isAllImages === 0){
+            counter.innerText = getLatestOpenedImg+"/"+ totalImages
+        }
+        else if (isAllImages === 1){
+            counter.innerText = "1/"+ totalImages
+        }
+
         counter.setAttribute("id", "counter")
         container.appendChild(counter)
 
