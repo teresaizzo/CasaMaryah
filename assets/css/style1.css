@@ -397,7 +397,7 @@ body {
 
 @media screen and (max-width: 1115px){
   #info{
-    padding: 30px;
+    padding: 70px 30px 30px;
     gap: 50px;
   }
 }
@@ -693,7 +693,7 @@ body {
 
 @media screen and (max-width: 1115px){
   #index-gallery {
-    padding: 30px;
+    padding: 70px 30px 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
           "gallery-h1 gallery-h1 gallery-h1"
@@ -704,15 +704,15 @@ body {
   .img6, .img7{
     display: none;
   }
+  #more-images{
+    right: 40px;
+    bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 992px){
   #index-gallery {
     text-align: center;
-  }
-  #more-images{
-    right: 40px;
-    bottom: 40px;
   }
 }
 
@@ -795,7 +795,7 @@ body {
 
 @media screen and (max-width: 1115px){
   #contact{
-    padding: 30px;
+    padding: 70px 30px 30px;
   }
 }
 
