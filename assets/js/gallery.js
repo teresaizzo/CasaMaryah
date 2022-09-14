@@ -60,7 +60,7 @@ function createCarousel(imageUrl, isAllImages){
         container.appendChild(newNextBtn);
         newNextBtn.setAttribute("class", "img-btn-next");
         newNextBtn.setAttribute("onclick", "changeImg(1)");
-        newNextBtn.style.cssText= "right: " + calcImgToEdge + "px;";
+       // newNextBtn.style.cssText= "right: " + calcImgToEdge + "px;";
 
         let newPrevBtn = document.createElement("a");
         let btnPrevText = document.createElement("i");
@@ -69,7 +69,7 @@ function createCarousel(imageUrl, isAllImages){
         container.appendChild(newPrevBtn);
         newPrevBtn.setAttribute("class", "img-btn-prev");
         newPrevBtn.setAttribute("onclick", "changeImg(0)");
-        newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
+        //newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
 
         // create counter
         let counter = document.createElement("p");
@@ -137,6 +137,7 @@ function changeImg(changeDir) {
     getLatestOpenedImg = calcNewImg;
 
     //remove this to change dinamically the position of the navigation buttons
+    /*
     newImg.onload = function () {
         let imgWidth = this.width;
         let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
@@ -147,5 +148,7 @@ function changeImg(changeDir) {
         let prevBtn = document.querySelector(".img-btn-prev");
         prevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
     }
+
+     */
 
 }
