@@ -103,7 +103,7 @@ function closeImg(){
     document.querySelector(".img-window").remove();
     document.querySelector(".img-btn-next").remove();
     document.querySelector(".img-btn-prev").remove();
-    document.querySelector("#counter").remove();
+    document.querySelector(".close-modal").remove();
 }
 
 
