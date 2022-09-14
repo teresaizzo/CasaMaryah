@@ -97,7 +97,7 @@ body {
   padding: 15px 90px 15px 90px;
   font-weight: 600;
   background: #ffffff;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   box-sizing: border-box;
   top: 0;
@@ -171,7 +171,7 @@ body {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  z-index: 2;
+  z-index: 9999;
 }
 
 /* lines of Icon*/
@@ -240,7 +240,7 @@ body {
 
 .navbar-responsive {
   color: #fff;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100%;
   transform: translate3d(-100%, 0, 0);
@@ -275,7 +275,7 @@ body {
 .navbar-responsive .navbar-responsive__nav .navbar-responsive__link a {
   display: block;
   padding: 15px;
-  color: #fff;
+  color: var(--theme-color);
   text-decoration: none;
   transition: 0.25s;
 }
