@@ -41,7 +41,7 @@ function createCarousel(imageUrl, isAllImages){
     let newImgWindow = document.createElement("div");
     container.appendChild(newImgWindow);
     newImgWindow.setAttribute("class", "img-window");
-    newImgWindow.setAttribute("onclick", "closeImg()");
+    //newImgWindow.setAttribute("onclick", "closeImg()");
 
     let newImg = document.createElement("img");
     newImgWindow.appendChild(newImg);
@@ -54,7 +54,8 @@ function createCarousel(imageUrl, isAllImages){
         let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
 
         let newNextBtn = document.createElement("a");
-        let btnNextText = document.createTextNode("Next");
+        let btnNextText = document.createElement("i");
+        btnNextText.setAttribute("class", "bx bx-chevron-right");
         newNextBtn.appendChild(btnNextText);
         container.appendChild(newNextBtn);
         newNextBtn.setAttribute("class", "img-btn-next");
@@ -62,13 +63,15 @@ function createCarousel(imageUrl, isAllImages){
         newNextBtn.style.cssText= "right: " + calcImgToEdge + "px;";
 
         let newPrevBtn = document.createElement("a");
-        let btnPrevText = document.createTextNode("Prev");
+        let btnPrevText = document.createElement("i");
+        btnPrevText.setAttribute("class", "bx bx-chevron-left");
         newPrevBtn.appendChild(btnPrevText);
         container.appendChild(newPrevBtn);
         newPrevBtn.setAttribute("class", "img-btn-prev");
         newPrevBtn.setAttribute("onclick", "changeImg(0)");
         newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
 
+        // create counter
         let counter = document.createElement("p");
 
         if(isAllImages === 0){
@@ -79,7 +82,18 @@ function createCarousel(imageUrl, isAllImages){
         }
 
         counter.setAttribute("id", "counter")
-        container.appendChild(counter)
+        newImgWindow.appendChild(counter)
+
+        //create close button
+        let closeBtn = document.createElement("a");
+        let closeIcon = document.createElement("i");
+        closeIcon.setAttribute("class", "bx bx-x");
+        closeBtn.appendChild(closeIcon);
+        let btnText = document.createTextNode("Chiudi");
+        closeBtn.appendChild(btnText);
+        container.appendChild(closeBtn);
+        closeBtn.setAttribute("class", "close-modal");
+        closeBtn.setAttribute("onclick", "closeImg()");
 
     }
 }
