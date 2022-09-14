@@ -75,7 +75,7 @@ function createCarousel(imageUrl, isAllImages){
         let counter = document.createElement("p");
 
         if(isAllImages === 0){
-            counter.innerText = getLatestOpenedImg+"/"+ totalImages
+            counter.innerText = getLatestOpenedImg+" / "+ totalImages
         }
         else if (isAllImages === 1){
             counter.innerText = "1/"+ totalImages
@@ -122,13 +122,13 @@ function changeImg(changeDir) {
         if (calcNewImg > totalImages) {
             calcNewImg = 1
         }
-        counter.innerText = calcNewImg+"/"+ totalImages
+        counter.innerText = calcNewImg+" / "+ totalImages
     } else if (changeDir === 0) {
         calcNewImg = getLatestOpenedImg - 1;
         if (calcNewImg < 1) {
             calcNewImg =  totalImages
         }
-        counter.innerText = calcNewImg+"/"+ totalImages
+        counter.innerText = calcNewImg+" / "+ totalImages
     }
 
     newImg.setAttribute("src", "../assets/img/gallery/" + calcNewImg + ".jpeg");
