@@ -14,14 +14,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-
-/*
-* {
-  font-family: 'Bitter', serif;
-}
-
- */
-
 .regular {
   font-weight: 400;
 }
@@ -102,7 +94,7 @@ body {
 .navbar .navbar__wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 30px 90px 30px 90px;
+  padding: 15px 90px 15px 90px;
   font-weight: 600;
   background: #ffffff;
   z-index: 1;
@@ -111,7 +103,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+  border-bottom: 1px solid #E1E1E1FF ;
 }
 
 
@@ -125,8 +117,9 @@ body {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  gap: 25px;
+  gap: 15px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .navbar .navbar__wrapper .navbar__link a{
@@ -305,6 +298,11 @@ body {
   transition: 0.25s;
 }
 
+@media screen and (max-width: 1115px) {
+  .navbar .navbar__wrapper {
+    padding: 15px 30px 15px 30px;
+  }
+}
 
 @media (max-width: 768px) {
   .navbar__nav {
@@ -321,12 +319,7 @@ body {
   }
 }
 
-@media screen and (max-width: 414px){
 
-  .navbar .navbar__wrapper {
-    padding: 30px 40px 30px 40px;
-  }
-}
 
 
 
