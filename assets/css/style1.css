@@ -270,7 +270,6 @@ body {
 }
 .navbar-responsive .navbar-responsive__nav .navbar-responsive__link {
   text-align: center;
-  letter-spacing: 2px;
 }
 .navbar-responsive .navbar-responsive__nav .navbar-responsive__link a {
   display: block;
@@ -659,7 +658,6 @@ body {
 
 .close-modal{
   position: fixed;
-  top: 10vh;
   color: white;
   z-index: 9500;
   cursor: pointer;
