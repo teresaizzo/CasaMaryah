@@ -755,6 +755,18 @@ body {
     right: 30px;
     bottom: 30px;
   }
+
+  .img-btn-next, .img-btn-prev{
+    top: 85vh;
+  }
+
+  .img-btn-next{
+    right: 30vw;
+  }
+
+  .img-btn-prev{
+    left: 30vw;
+  }
 }
 
 

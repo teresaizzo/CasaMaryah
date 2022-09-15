@@ -42,6 +42,7 @@ function createCarousel(imageUrl, isAllImages){
     container.appendChild(newImgWindow);
     newImgWindow.setAttribute("class", "img-window");
     //newImgWindow.setAttribute("onclick", "closeImg()");
+    container.style.overflow = "hidden";
 
     let newImg = document.createElement("img");
     newImgWindow.appendChild(newImg);
@@ -104,6 +105,8 @@ function closeImg(){
     document.querySelector(".img-btn-next").remove();
     document.querySelector(".img-btn-prev").remove();
     document.querySelector(".close-modal").remove();
+    let container = document.body;
+    container.style.overflow = "auto";
 }
 
 
