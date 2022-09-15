@@ -659,7 +659,6 @@ body {
   z-index: 9500;
   font-family: Arial , Helvetica , sans-serif;
   color: #ffffff;
-  cursor: pointer;
 }
 
 .close-modal{
@@ -766,6 +765,11 @@ body {
 
   .img-btn-prev{
     left: 30vw;
+  }
+
+  .img-window img{
+    max-height: 90vh;
+    max-width: 90vw;
   }
 }
 
