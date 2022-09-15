@@ -46,7 +46,7 @@ function createCarousel(imageUrl, isAllImages){
 
     let newImg = document.createElement("img");
     newImgWindow.appendChild(newImg);
-    newImg.setAttribute("src", "../assets/img/gallery/" + imageUrl);
+    newImg.setAttribute("src", "assets/img/gallery/" + imageUrl);
     newImg.setAttribute("id", "current-img")
 
     // create navigation buttons
