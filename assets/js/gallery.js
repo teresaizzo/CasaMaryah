@@ -1,7 +1,7 @@
 let galleryImages = document.querySelectorAll(".gallery-img");
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
-let totalImages = 15;
+let totalImages = 16;
 
 
 let showAllButton = document.querySelector("#more-images");

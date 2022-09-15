@@ -8,6 +8,9 @@
   --theme-color: #2b2b2b;
   --heading: #2b2b2b;
   --secondary-color: #484848;
+  --fs-title-resp:30px;
+  --fs-p-resp:14px;
+
 }
 
 * {
@@ -346,6 +349,7 @@ body {
   background-position-y: center;
   padding: 0 90px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -353,6 +357,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top:110px;
+  align-items: center;
 }
 
 #hero-container .city, #hero-container .address {
@@ -361,11 +366,11 @@ body {
 }
 
 #hero-container .address{
-  font-size: 64px;
+  font-size: 120px;
 }
 
 #hero-container .city{
-  font-size: 26px;
+  font-size: 60px;
 }
 
 
@@ -738,6 +743,7 @@ body {
   gap: 80px;
   background: #ffffff;
   box-sizing: border-box;
+  color: var(--theme-color);
 
 }
 
@@ -755,7 +761,7 @@ body {
 }
 
 #contact .right-container .contact-card {
-  width: 310px;
+  width: auto;
   height: 467px;
 }
 
@@ -811,6 +817,26 @@ body {
   }
 }
 
+@media screen and (max-width: 414px){
+  #contact{
+    padding: 70px 20px 20px;
+    gap: 40px;
+  }
+
+  #contact .title-section{
+    font-size: var(--fs-title-resp);
+  }
+
+  #contact .right-container .contact-card .single-contact p{
+    font-size: var(--fs-p-resp);
+  }
+
+  #contact .right-container .contact-card .single-contact h3{
+    font-size: 18px;
+  }
+
+}
+
 /*--------------------------------------------------------------
 # Footer Section
 --------------------------------------------------------------*/
@@ -837,9 +863,10 @@ body {
   color: var(--theme-color);
 }
 
-@media screen and (max-width: 410px){
+@media screen and (max-width: 414px){
   .site-footer
   {
+    padding:20px;
     font-size:12px;
   }
 }
