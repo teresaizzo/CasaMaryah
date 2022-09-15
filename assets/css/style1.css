@@ -493,6 +493,7 @@ body {
           "img1 img2 img3 img4"
           "img5 img6 img3 img7"
 ;
+  color: var(--theme-color);
 
 }
 
@@ -726,6 +727,36 @@ body {
     display: none;
   }
 }
+
+@media screen and (max-width: 500px){
+  #index-gallery{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+          "gallery-h1"
+          "img1"
+          "img2";
+  }
+  .img3,.img4, .img5, .img6, .img7{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 414px) {
+  #index-gallery h1{
+    font-size: var(--fs-title-resp);
+  }
+
+  #index-gallery {
+    padding: 70px 20px 20px;
+  }
+
+  #more-images{
+    right: 30px;
+    bottom: 30px;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
