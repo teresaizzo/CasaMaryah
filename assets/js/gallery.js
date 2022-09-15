@@ -134,7 +134,7 @@ function changeImg(changeDir) {
         counter.innerText = calcNewImg+" / "+ totalImages
     }
 
-    newImg.setAttribute("src", "../assets/img/gallery/" + calcNewImg + ".jpeg");
+    newImg.setAttribute("src", "assets/img/gallery/" + calcNewImg + ".jpeg");
     newImg.setAttribute("id", "current-img");
 
     getLatestOpenedImg = calcNewImg;
