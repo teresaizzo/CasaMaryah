@@ -863,7 +863,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 70px auto auto;
 }
 
 .site-footer .copyright-text{
