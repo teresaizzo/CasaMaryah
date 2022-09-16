@@ -374,7 +374,7 @@ body {
 #info {
   max-width: 1440px;
   position: relative;
-  padding: 90px;
+  padding: 90px 90px 0 90px;
   margin: 0px auto auto;
   box-sizing: border-box;
   color: var(--theme-color);
@@ -387,7 +387,7 @@ body {
 
 @media screen and (max-width: 1115px){
   #info{
-    padding: 70px 30px 30px;
+    padding: 70px 30px 0 30px;
   }
   #info .left-container{
     width: 100%;
@@ -424,6 +424,10 @@ body {
 }
 
 @media screen and (max-width: 414px) {
+  #info{
+    padding: 70px 20px 0 20px;
+  }
+
   #info .left-container{
     font-size: var(--fs-p-resp);
   }
@@ -442,7 +446,7 @@ body {
 #index-gallery {
   max-width: 1440px;
   position: relative;
-  padding: 90px;
+  padding: 70px 90px 0 90px;
   margin: 0px auto auto;
   box-sizing: border-box;
   display: grid;
@@ -651,7 +655,7 @@ body {
 
 @media screen and (max-width: 1115px){
   #index-gallery {
-    padding: 70px 30px 30px;
+    padding: 50px 30px 0 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
           "gallery-h1 gallery-h1 gallery-h1"
@@ -710,7 +714,7 @@ body {
 @media screen and (max-width: 414px) {
 
   #index-gallery {
-    padding: 70px 20px 20px;
+    padding: 50px 20px 0 20px;
   }
 
   #more-images{
@@ -748,7 +752,7 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 90px;
+  padding: 90px 90px 0 90px;
   margin: 0px auto auto;
   gap: 80px;
   background: #ffffff;
@@ -803,7 +807,7 @@ body {
 
 @media screen and (max-width: 1115px){
   #contact{
-    padding: 70px 30px 30px;
+    padding: 70px 30px 0 30px;
   }
 }
 
@@ -830,7 +834,7 @@ body {
 
 @media screen and (max-width: 414px){
   #contact{
-    padding: 70px 20px 20px;
+    padding: 70px 20px 0 20px;
     gap: 40px;
   }
 
