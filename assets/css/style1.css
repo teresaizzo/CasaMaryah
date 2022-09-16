@@ -3,12 +3,11 @@
 --------------------------------------------------------------*/
 :root {
 
-  --primary-color:#3B7AE8;
+  --primary-color:#E1C699;
   --theme-bg-color: rgb(247, 247, 247);
   --theme-color: #2b2b2b;
-  --heading: #2b2b2b;
   --secondary-color: #484848;
-  --fs-title-resp:30px;
+  --fs-title-resp:40px;
   --fs-p-resp:14px;
 
 }
@@ -129,7 +128,7 @@ body {
   display: block;
   position: relative;
   text-decoration: none;
-  color: var(--heading);
+  color: var(--theme-color);
   text-align: center;
   padding: 14px 16px;
   font-size: 14px;
@@ -149,7 +148,7 @@ body {
 }
 
 .navbar .navbar__wrapper .navbar__brand {
-  color: var(--heading);
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
@@ -183,7 +182,7 @@ body {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: var(--heading);
+  background: var(--theme-color);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -347,32 +346,24 @@ body {
   background-size: cover;
   background-position: center;
   background-position-y: center;
-  padding: 0 90px;
+  padding: 0 90px 0 140px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 #hero-container .left-container{
   display: flex;
   flex-direction: column;
-  margin-top:110px;
+  margin-top:200px;
   align-items: center;
 }
 
-#hero-container .city, #hero-container .address {
+#hero-container .city{
   margin: 0;
   color: #ffffff;
-}
-
-#hero-container .address{
-  font-size: 120px;
-}
-
-#hero-container .city{
+  font-family: 'Great Vibes'!important;
   font-size: 60px;
 }
-
 
 
 
@@ -383,90 +374,43 @@ body {
 #info {
   max-width: 1440px;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 90px;
   margin: 0px auto auto;
-  gap: 80px;
   box-sizing: border-box;
+  color: var(--theme-color);
+}
+
+
+#info .left-container{
+  width: 80%;
 }
 
 @media screen and (max-width: 1115px){
   #info{
     padding: 70px 30px 30px;
-    gap: 50px;
   }
-}
-
-@media screen and (max-width: 992px){
-  #info {
-    flex-direction: column;
-    text-align: center;
-    justify-content: start;
-    height: auto;
-    gap:20px;
+  #info .left-container{
+    width: 100%;
   }
-}
-
-#info .left-container{
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
 }
 
 #info .left-container p{
   margin:0;
   margin-bottom: 20px;
-  text-align: justify;
   line-height: 1.5;
-}
-
-#info .left-container .service{
-  display: flex;
-  flex-direction: column;
-}
-
-#info .left-container .service .service-list{
-  text-decoration: none;
-  line-height: 2;
-  padding: 0;
-  list-style: none;
-  margin:0;
-  flex-wrap: wrap;
-  display: flex;
-  gap:20px;
-}
-
-#info .left-container .service .service-list li{
-  flex: 1 0 25%;
-}
-
-#info .left-container .service .service-list li:before{
-  content: "- ";
-}
-
-#info .right-container .summary-card{
-  width: 372px;
-  height: 467px;
-  background-color: #ffffff;
-  border: 1px solid rgb(221, 221, 221);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
-}
-
-.summary-card div{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 #info .title-section{
   font-size: 40px;
   display: inline-block;
+  color: var(--primary-color);
 }
 
+@media screen and (max-width: 414px) {
+  #info .left-container{
+    font-size: var(--fs-p-resp);
+  }
+}
 
 
 
@@ -512,6 +456,7 @@ body {
   grid-area: gallery-h1;
   font-size: 40px;
   display: inline-block;
+  color: var(--primary-color);
 }
 
 #index-gallery .img1{
@@ -742,9 +687,6 @@ body {
 
 
 @media screen and (max-width: 414px) {
-  #index-gallery h1{
-    font-size: var(--fs-title-resp);
-  }
 
   #index-gallery {
     padding: 70px 20px 20px;
@@ -797,6 +739,7 @@ body {
 #contact .title-section{
   font-size: 40px;
   display: inline-block;
+  color: var(--primary-color);
 }
 
 #contact .left-container {
@@ -819,10 +762,10 @@ body {
 }
 #contact .right-container .contact-card i{
   font-size: 20px;
-  color: #0563bb;
+  color: #ffffff;
   width: 44px;
   height: 44px;
-  background: #eef7ff;
+  background: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -870,10 +813,6 @@ body {
     gap: 40px;
   }
 
-  #contact .title-section{
-    font-size: var(--fs-title-resp);
-  }
-
   #contact .right-container .contact-card .single-contact p{
     font-size: var(--fs-p-resp);
   }
@@ -914,6 +853,6 @@ body {
   .site-footer
   {
     padding:20px;
-    font-size:12px;
+    font-size:13px;
   }
 }
