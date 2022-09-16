@@ -548,7 +548,7 @@ body {
   font-size: 14px;
   position: absolute;
   right: 100px;
-  bottom: 100px;
+  bottom: 10px;
   background-color: #ffffff;
   border: 1px solid var(--theme-color);
   cursor:pointer;
@@ -667,7 +667,7 @@ body {
 
   #more-images{
     right: 40px;
-    bottom: 40px;
+    bottom: 10px;
   }
 }
 
@@ -719,7 +719,7 @@ body {
 
   #more-images{
     right: 30px;
-    bottom: 30px;
+    bottom: 10px;
   }
 
   .img-btn-next, .img-btn-prev{
