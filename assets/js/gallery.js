@@ -2,6 +2,7 @@ let galleryImages = document.querySelectorAll(".gallery-img");
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 let totalImages = 9;
+let isSwipeDetectionEnabled = false;
 
 
 let showAllButton = document.querySelector("#more-images");
@@ -37,12 +38,17 @@ if (showAllButton) {
 // create carousel
 function createCarousel(imageUrl, isAllImages){
 
+
+
     let container = document.body;
     let newImgWindow = document.createElement("div");
     container.appendChild(newImgWindow);
     newImgWindow.setAttribute("class", "img-window");
     //newImgWindow.setAttribute("onclick", "closeImg()");
     container.style.overflow = "hidden";
+
+    //enable swipe detection
+    isSwipeDetectionEnabled = true;
 
     let newImg = document.createElement("img");
     newImgWindow.appendChild(newImg);
@@ -157,39 +163,34 @@ function changeImg(changeDir) {
 }
 
 
-var x = window.matchMedia("(max-width: 600px)");
+//enable swipe detection
+let touchstartX = 0
+let touchendX = 0
 
-
-//check if the carousel is created
-if(x.matches){
-
-    //enable swipe detection
-    let touchstartX = 0
-    let touchendX = 0
-
-    function checkDirection() {
-        if (touchendX < touchstartX){
+function checkDirection() {
+    if (touchendX < touchstartX){
+        if (isSwipeDetectionEnabled){
             alert('swiped left!')
-            //changeImg(0)
+            changeImg(0)
         }
-        if (touchendX > touchstartX){
+
+    }
+    if (touchendX > touchstartX){
+        if (isSwipeDetectionEnabled) {
             alert('swiped right!')
-            //changeImg(1)
+            changeImg(1)
         }
     }
-
-    document.addEventListener('touchstart', e => {
-        touchstartX = e.changedTouches[0].screenX
-    })
-
-    document.addEventListener('touchend', e => {
-        touchendX = e.changedTouches[0].screenX
-        checkDirection()
-    })
-
-
-    //delete navigation buttons
 }
+
+document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX
+})
+
+document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX
+    checkDirection()
+})
 
 
 
