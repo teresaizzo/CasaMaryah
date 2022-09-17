@@ -170,11 +170,11 @@ if(x.matches){
     function checkDirection() {
         if (touchendX < touchstartX){
             alert('swiped left!')
-            changeImg(0)
+            //changeImg(0)
         }
         if (touchendX > touchstartX){
             alert('swiped right!')
-            changeImg(1)
+            //changeImg(1)
         }
     }
 
