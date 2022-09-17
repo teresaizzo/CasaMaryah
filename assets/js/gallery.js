@@ -156,19 +156,42 @@ function changeImg(changeDir) {
 
 }
 
-let touchstartX = 0
-let touchendX = 0
 
-function checkDirection() {
-    if (touchendX < touchstartX) alert('swiped left!')
-    if (touchendX > touchstartX) alert('swiped right!')
+var x = window.matchMedia("(max-width: 600px)");
+
+
+//check if the carousel is created
+if(x.matches){
+
+    //enable swipe detection
+    let touchstartX = 0
+    let touchendX = 0
+
+    function checkDirection() {
+        if (touchendX < touchstartX){
+            alert('swiped left!')
+            changeImg(0)
+        }
+        if (touchendX > touchstartX){
+            alert('swiped right!')
+            changeImg(1)
+        }
+    }
+
+    document.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX
+    })
+
+    document.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX
+        checkDirection()
+    })
+
+
+    //delete navigation buttons
 }
 
-document.addEventListener('touchstart', e => {
-    touchstartX = e.changedTouches[0].screenX
-})
 
-document.addEventListener('touchend', e => {
-    touchendX = e.changedTouches[0].screenX
-    checkDirection()
-})
+
+
+
