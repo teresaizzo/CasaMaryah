@@ -810,7 +810,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   padding: 90px 90px 0 90px;
   margin: 0px auto auto;
@@ -827,8 +827,8 @@ body {
   color: var(--primary-color);
 }
 
-#contact .left-container {
-  width: calc(100% - 270px);
+#contact #map {
+  width: 100%
 }
 
 #contact .left-container iframe{
