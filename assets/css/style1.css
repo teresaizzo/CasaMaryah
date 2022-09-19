@@ -619,7 +619,6 @@ body {
 
 #counter {
   display: block;
-  padding: 6px 10px;
   position: fixed;
   top: 1vh;
   z-index: 9500;
@@ -692,11 +691,6 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .img-btn-next, .img-btn-prev{
-    display: none;
-  }
-}
 
 
 @media screen and (max-width: 500px){
@@ -714,6 +708,10 @@ body {
   }
   #index-gallery .img3{
     height: 300px;
+  }
+
+  .img-btn-next, .img-btn-prev{
+    display: none;
   }
 }
 

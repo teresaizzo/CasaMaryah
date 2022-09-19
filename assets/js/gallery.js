@@ -20,7 +20,7 @@ function checkMobile(x) {
     }
 }
 
-var x = window.matchMedia("(max-width: 600px)")
+var x = window.matchMedia("(max-width: 500px)")
 checkMobile(x) // Call listener function at run time
 x.addListener(checkMobile) // Attach listener function on state
 
@@ -254,8 +254,6 @@ function checkKey(e) {
             changeImg(1)
         }
     }
-
-
 }
 
 
