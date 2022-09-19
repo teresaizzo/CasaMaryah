@@ -234,6 +234,31 @@ document.addEventListener('touchend', e => {
 })
 
 
+/**
+ * enable press key detection
+ */
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    if(document.querySelector(".img-window")){
+
+        e = e || window.event;
+
+        if (e.keyCode == '37') {
+            // left arrow
+            changeImg(0)
+        }
+        else if (e.keyCode == '39') {
+            // right arrow
+            changeImg(1)
+        }
+    }
+
+
+}
+
+
 
 
 
