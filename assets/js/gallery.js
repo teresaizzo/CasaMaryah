@@ -3,9 +3,31 @@ let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 let totalImages = 9;
 let isSwipeDetectionEnabled = false;
+let isMobile = false;
 
 
 let showAllButton = document.querySelector("#more-images");
+
+
+/**
+ * Media query mobile
+ */
+function checkMobile(x) {
+    if (x.matches) { // If media query matches
+        isMobile = true;
+    } else {
+        isMobile = false;
+    }
+}
+
+var x = window.matchMedia("(max-width: 600px)")
+checkMobile(x) // Call listener function at run time
+x.addListener(checkMobile) // Attach listener function on state
+
+
+
+
+
 
 //click on gallery images
 if(galleryImages){
@@ -35,7 +57,9 @@ if (showAllButton) {
     }
 }
 
-// create carousel
+/**
+ * Create carousel
+ */
 function createCarousel(imageUrl, isAllImages){
 
 
@@ -47,19 +71,19 @@ function createCarousel(imageUrl, isAllImages){
     //newImgWindow.setAttribute("onclick", "closeImg()");
     container.style.overflow = "hidden";
 
-    //enable swipe detection
-    isSwipeDetectionEnabled = true;
+
 
     let newImg = document.createElement("img");
     newImgWindow.appendChild(newImg);
     newImg.setAttribute("src", "assets/img/gallery/" + imageUrl);
     newImg.setAttribute("id", "current-img")
 
-    // create navigation buttons
+
     newImg.onload = function (){
         let imgWidth = this.width;
         let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
 
+        // create navigation buttons
         let newNextBtn = document.createElement("a");
         let btnNextText = document.createElement("i");
         btnNextText.setAttribute("class", "bx bx-chevron-right");
@@ -67,7 +91,7 @@ function createCarousel(imageUrl, isAllImages){
         container.appendChild(newNextBtn);
         newNextBtn.setAttribute("class", "img-btn-next");
         newNextBtn.setAttribute("onclick", "changeImg(1)");
-       // newNextBtn.style.cssText= "right: " + calcImgToEdge + "px;";
+        //newNextBtn.style.cssText= "right: " + calcImgToEdge + "px;";
 
         let newPrevBtn = document.createElement("a");
         let btnPrevText = document.createElement("i");
@@ -77,6 +101,11 @@ function createCarousel(imageUrl, isAllImages){
         newPrevBtn.setAttribute("class", "img-btn-prev");
         newPrevBtn.setAttribute("onclick", "changeImg(0)");
         //newPrevBtn.style.cssText= "left: " + calcImgToEdge + "px;";
+
+        //enable swipe detection
+        if (isMobile){
+            isSwipeDetectionEnabled = true;
+        }
 
         // create counter
         let counter = document.createElement("p");
@@ -106,6 +135,10 @@ function createCarousel(imageUrl, isAllImages){
 }
 
 
+
+/**
+ * Close image carousel
+ */
 function closeImg(){
     document.querySelector(".img-window").remove();
     document.querySelector(".img-btn-next").remove();
@@ -113,9 +146,12 @@ function closeImg(){
     document.querySelector(".close-modal").remove();
     let container = document.body;
     container.style.overflow = "auto";
+    isSwipeDetectionEnabled = false;
 }
 
-
+/**
+ * Change image in carousel
+ */
 function changeImg(changeDir) {
     document.querySelector("#current-img").remove();
 
@@ -145,7 +181,7 @@ function changeImg(changeDir) {
 
     getLatestOpenedImg = calcNewImg;
 
-    //remove this to change dinamically the position of the navigation buttons
+    //change dinamically the position of the navigation buttons
     /*
     newImg.onload = function () {
         let imgWidth = this.width;
@@ -163,22 +199,27 @@ function changeImg(changeDir) {
 }
 
 
-//enable swipe detection
+
+
+/**
+ * enable swipe detection
+ */
+
 let touchstartX = 0
 let touchendX = 0
 
 function checkDirection() {
     if (touchendX < touchstartX){
         if (isSwipeDetectionEnabled){
-            alert('swiped left!')
-            changeImg(0)
+            //left swipe
+            changeImg(1)
         }
 
     }
     if (touchendX > touchstartX){
         if (isSwipeDetectionEnabled) {
-            alert('swiped right!')
-            changeImg(1)
+            //right swipe
+            changeImg(0)
         }
     }
 }
@@ -191,6 +232,8 @@ document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX
     checkDirection()
 })
+
+
 
 
 

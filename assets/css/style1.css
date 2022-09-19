@@ -692,6 +692,13 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .img-btn-next, .img-btn-prev{
+    display: none;
+  }
+}
+
+
 @media screen and (max-width: 500px){
   #index-gallery{
     grid-template-columns: 1fr;
@@ -720,18 +727,6 @@ body {
   #more-images{
     right: 30px;
     bottom: 10px;
-  }
-
-  .img-btn-next, .img-btn-prev{
-    top: 85vh;
-  }
-
-  .img-btn-next{
-    right: 30vw;
-  }
-
-  .img-btn-prev{
-    left: 30vw;
   }
 
   .img-window img{
