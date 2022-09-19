@@ -134,3 +134,14 @@ window.addEventListener('load', () => {
     mirror: false
   })
 });
+
+
+/**
+ * Preloader
+ */
+
+$(window).on("load", function (){
+  document.body.classList.remove('no-scroll');
+  $(".sk-circle-wrapper").fadeOut("slow");
+
+});
