@@ -132,10 +132,6 @@ body {
   background-color: #ffffff;
 }
 
-.no-scroll{
-  overflow: hidden;
-}
-
 *{
   box-sizing: border-box;
 }

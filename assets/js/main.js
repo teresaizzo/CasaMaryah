@@ -141,7 +141,7 @@ window.addEventListener('load', () => {
  */
 
 $(window).on("load", function (){
-  document.body.classList.remove('no-scroll');
+  $(window).css("overflow", "hidden")
   $(".sk-circle-wrapper").fadeOut("slow");
 
 });
