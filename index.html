@@ -52,7 +52,7 @@
 
 </head>
 
-<body id="body" onresize="onResizeHeight()">
+<body id="body" onresize="onResize()">
 
 
 <!-- Navbar section -->
@@ -232,15 +232,19 @@
 
 
   window.onload = function (){
-    onResizeHeight()
+    onResize()
   }
 
 
-  function onResizeHeight(){
+  function onResize(){
     if (window.innerHeight <= 484){
       document.querySelector(".navbar-responsive__nav").style.height = (window.innerHeight - 66) + "px";
     }else{
       document.querySelector(".navbar-responsive__nav").style.height = "auto";
+    }
+
+    if (window.innerWidth > 791){
+      $('#body').css("overflow", "auto")
     }
   }
 

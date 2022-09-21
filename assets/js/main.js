@@ -50,6 +50,7 @@
     })
   })
 
+
   /**
    * Hide responsive navbar
    */
