@@ -354,7 +354,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 790px) {
   .navbar__nav {
     display: none !important;
   }
@@ -362,8 +362,7 @@ body {
   #nav-icon3 span {
     display: block !important;
   }
-}
-@media (min-width: 768px) {
+
   .navbar__responsive {
     transform: translate3d(-100%, 0, 0) !important;
   }
@@ -811,6 +810,13 @@ body {
   .img-window img{
     max-height: 90vh;
     max-width: 90vw;
+  }
+}
+
+
+@media screen and (max-height: 380px){
+  #counter{
+    display: none;
   }
 }
 

@@ -62,7 +62,7 @@
     }
   }
 
-  var x = window.matchMedia("(min-width: 768px)")
+  var x = window.matchMedia("(min-width: 790px)")
   hideNavbar(x) // Call listener function at run time
   x.addEventListener("change", () => {
     hideNavbar(x)
