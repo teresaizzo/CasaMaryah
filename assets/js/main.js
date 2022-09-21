@@ -69,7 +69,6 @@
   }); // Attach listener function on state changes
 
 
-
   /**
    * Back to top button
    */

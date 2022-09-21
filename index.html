@@ -52,7 +52,7 @@
 
 </head>
 
-<body id="body">
+<body id="body" onresize="onResizeHeight()">
 
 
 <!-- Navbar section -->
@@ -224,5 +224,26 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/gallery.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+
+  /**
+   * Media query mobile navbar height scroll
+   */
+
+
+  window.onload = function (){
+    onResizeHeight()
+  }
+
+
+  function onResizeHeight(){
+    if (window.innerHeight <= 484){
+      document.querySelector(".navbar-responsive__nav").style.height = (window.innerHeight - 66) + "px";
+    }else{
+      document.querySelector(".navbar-responsive__nav").style.height = "auto";
+    }
+  }
+
+</script>
 
 </html>
