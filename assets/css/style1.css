@@ -369,12 +369,32 @@ body {
 }
 
 
+@media screen and (max-height: 484px){
+  .navbar-responsive .navbar-responsive__nav{
+    width: 100%;
+    overflow-y: scroll;
+
+    top: 66px;
+    transform: translate(-50%);
+  }
+
+
+  .navbar-responsive .navbar-responsive__nav .navbar-responsive__link a#about-button-responsive {
+    color: white;
+    border: 0;
+    border-radius: 11px;
+    transition: 0.25s;
+    width: 126px;
+    margin: auto auto 30px;
+  }
+}
 
 
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
 #hero {
   max-width: 1440px;
   min-height: 700px;
