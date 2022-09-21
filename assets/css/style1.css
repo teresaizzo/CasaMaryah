@@ -584,6 +584,20 @@ body {
   background-image:url("../img/gallery/7.jpeg") ;
 }
 
+#index-gallery .img8{
+  grid-area: img8;
+  background-image:url("../img/gallery/8.jpeg") ;
+}
+
+#index-gallery .img9{
+  grid-area: img9;
+  background-image:url("../img/gallery/9.jpeg") ;
+}
+
+.img8, .img9{
+  display: none;
+}
+
 
 /* Gallery image titles */
 .gallery-img div{
