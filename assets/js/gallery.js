@@ -53,7 +53,7 @@ if(galleryImages){
 if (showAllButton) {
     showAllButton.onclick = function () {
         getLatestOpenedImg = 1;
-        createCarousel("1.jpeg", 1);
+        createCarousel("1.webp", 1);
     }
 }
 
@@ -176,7 +176,7 @@ function changeImg(changeDir) {
         counter.innerText = calcNewImg+" / "+ totalImages
     }
 
-    newImg.setAttribute("src", "assets/img/gallery/" + calcNewImg + ".jpeg");
+    newImg.setAttribute("src", "assets/img/gallery/" + calcNewImg + ".webp");
     newImg.setAttribute("id", "current-img");
 
     getLatestOpenedImg = calcNewImg;
