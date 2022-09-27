@@ -407,7 +407,7 @@ body {
 #hero-container {
   width: 100%;
   height: 100%;
-  background: url("../img/hero-bg.jpeg") no-repeat;
+  background: url("../img/hero-bg.webp") no-repeat;
   background-size: cover;
   background-position: center;
   background-position-y: center;
@@ -568,49 +568,49 @@ body {
 
 #index-gallery .img1{
   grid-area: img1;
-  background-image:url("../img/gallery/1.jpeg") ;
+  background-image:url("../img/gallery/1.webp") ;
 
 }
 
 #index-gallery .img2{
   grid-area: img2;
-  background-image:url("../img/gallery/2.jpeg") ;
+  background-image:url("../img/gallery/2.webp") ;
 }
 
 #index-gallery .img3{
   grid-area: img3;
-  background-image:url("../img/gallery/3.jpeg") ;
+  background-image:url("../img/gallery/3.webp") ;
   height: 610px;
 }
 
 #index-gallery .img4{
   grid-area: img4;
-  background-image:url("../img/gallery/4.jpeg") ;
+  background-image:url("../img/gallery/4.webp") ;
 }
 
 #index-gallery .img5{
   grid-area: img5;
-  background-image:url("../img/gallery/5.jpeg") ;
+  background-image:url("../img/gallery/5.webp") ;
 }
 
 #index-gallery .img6{
   grid-area: img6;
-  background-image:url("../img/gallery/6.jpeg") ;
+  background-image:url("../img/gallery/6.webp") ;
 }
 
 #index-gallery .img7{
   grid-area: img7;
-  background-image:url("../img/gallery/7.jpeg") ;
+  background-image:url("../img/gallery/7.webp") ;
 }
 
 #index-gallery .img8{
   grid-area: img8;
-  background-image:url("../img/gallery/8.jpeg") ;
+  background-image:url("../img/gallery/8.webp") ;
 }
 
 #index-gallery .img9{
   grid-area: img9;
-  background-image:url("../img/gallery/9.jpeg") ;
+  background-image:url("../img/gallery/9.webp") ;
 }
 
 .img8, .img9{
